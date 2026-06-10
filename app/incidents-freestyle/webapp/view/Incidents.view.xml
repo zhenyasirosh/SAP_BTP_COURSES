@@ -1,0 +1,51 @@
+<mvc:View
+    controllerName="incidentsfreestyle.controller.Incidents"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+>
+    <f:DynamicPage id="dynamicPageId">
+        <f:content>
+            <Table
+                id="idProductsTable"
+                sticky="HeaderToolbar,ColumnHeaders"
+                inset="false"
+                items="{
+                    path: '/ListOfIncidents'
+                }"
+                width="100%"
+            >
+                <headerToolbar>
+                    <Toolbar>
+                        <Title
+                            text="Products"
+                            level="H2"
+                        />
+                    </Toolbar>
+                </headerToolbar>
+                <columns>
+                    <Column
+                    >
+                        <Text text="Supplier" />
+                    </Column>
+                    <Column
+                    >
+                        <Text text="Dimensions" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text
+                                text="{title}"
+                            />
+                            <Text
+                                text="{customer/name}"
+                            />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </f:content>
+    </f:DynamicPage>
+</mvc:View>

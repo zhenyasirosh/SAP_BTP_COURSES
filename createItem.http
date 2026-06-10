@@ -1,0 +1,9 @@
+### Create Item
+POST http://localhost:4004/odata/v4/processor/createItem
+Content-Type: application/json
+
+{
+  "title": "Laptop",
+  "description": "Dell XPS",
+  "quantity": 10
+}
