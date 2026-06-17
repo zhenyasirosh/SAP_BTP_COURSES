@@ -57,10 +57,20 @@
         }
       },
       "API_BUSINESS_PARTNER": {
-        "kind": "odata",
+        "kind": "odata-v2",
         "model": "srv/external/API_BUSINESS_PARTNER",
         "credentials": {
-          "url": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_BUSINESS_PARTNER/"
+          "url": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_BUSINESS_PARTNER",
+          "headers": {
+            "APIKey": "GBW5lDGBb2lteRLL28Re3dGpe4ngQOFq"
+          }
+        }
+      },
+      "Northwind": {
+        "kind": "odata-v2",
+        "model": "srv/external/Northwind",
+        "credentials": {
+          "url": "https://services.odata.org/Northwind/Northwind.svc"
         }
       }
     }
