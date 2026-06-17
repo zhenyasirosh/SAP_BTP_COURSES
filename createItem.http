@@ -1,5 +1,6 @@
 ### Create Item
 POST http://localhost:4004/odata/v4/processor/createItem
+Authorization: Basic incident.support@tester.sap.com:initial
 Content-Type: application/json
 
 {

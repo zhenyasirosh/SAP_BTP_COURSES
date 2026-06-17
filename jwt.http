@@ -1,0 +1,5 @@
+POST https://62761a0etrial.authentication.us10.hana.ondemand.com/oauth/token
+Authorization: Basic c2Itand0LXRyYWluaW5nIXQ2NjE1NzE6ODE4M2RjYzQtN2RjNi00ODIxLTk3OGMtODNiYTFlYzJkYmUxJFRhYXZsV0NySUJxMEpMd042dGNtcFdtMG5hNGYwMWFRbWlBQXE0OTUzQjg9
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=client_credentials
