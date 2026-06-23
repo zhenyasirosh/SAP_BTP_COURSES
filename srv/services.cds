@@ -1,4 +1,15 @@
 using {sap.capire.incidents as my} from '../db/schema';
+using { Northwind } from './external/Northwind';
+
+type NorthwindOrder {
+    OrderID      : Integer;
+    CustomerID   : String;
+    EmployeeID   : Integer;
+    OrderDate    : DateTime;
+    ShipName     : String;
+    ShipCity     : String;
+    ShipCountry  : String;
+  }
 
 /**
  * Service used by support personell, i.e. the incidents' 'processors'.
@@ -26,6 +37,10 @@ service ProcessorService {
         };
 
     function getItemsByQuantity(quantity: Integer) returns array of Items;
+
+    function getOrders(top: Integer, skip: Integer) returns array of NorthwindOrder;
+
+    function getOrders2(top: Integer, skip: Integer) returns array of NorthwindOrder;
 
     action createItem(
         title: String,

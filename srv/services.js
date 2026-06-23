@@ -14,6 +14,26 @@ class ProcessorService extends cds.ApplicationService {
 
     this.s4bupa = await cds.connect.to('API_BUSINESS_PARTNER');
     this.remoteService = await cds.connect.to('RemoteService');
+    this.northwind = await cds.connect.to('Northwind');
+
+    this.on('getOrders', async req => {
+
+      const orders = await this.northwind.get("/Orders");
+      return orders;
+    });
+
+    this.on('getOrders2', async req => {
+      this.northwindDestination =
+        await cds.connect.to('NorthwindDestination');
+      const { Orders } = this.northwindDestination.entities;
+      const top = req.data?.top ?? 10;
+      const skip = req.data?.skip ?? 0;
+
+      
+      return this.northwindDestination.run(
+        SELECT.from(Orders).limit(top, skip)
+      );
+    });
 
     this.before("READ", "Incidents", async (req) => {
       const cutomers = await SELECT.from("Customers");
