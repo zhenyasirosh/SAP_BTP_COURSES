@@ -1,4 +1,4 @@
 {
-    "xsappname": "jwt-training",
-    "tenant-mode": "dedicated"
+  "xsappname": "incident-management",
+  "tenant-mode": "dedicated"
 }
