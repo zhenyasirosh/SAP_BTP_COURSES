@@ -75,18 +75,19 @@
       },
       "Northwind": {
         "kind": "odata-v2",
+        "model": "srv/external/Northwind",
         "credentials": {
           "url": "https://services.odata.org/Northwind/Northwind.svc"
         }
       },
       "NorthwindDestination": {
         "kind": "odata-v2",
-        "model": "srv/external/Northwind",
-        "service": "Northwind",
+        "model": "srv/external/NorthwindDestination",
         "credentials": {
           "destination": "Northwind2"
         }
-      }
+      },
+      "html5-repo": true
     }
   }
 }
